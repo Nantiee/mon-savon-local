@@ -1,0 +1,61 @@
+{
+  "extends": [
+    "standard-with-typescript",
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "!.storybook"
+  ],
+  "rules": {
+    // Indent JSX with 2 spaces
+    "react/jsx-indent": ["warn", 2],
+    // If multiline props, put first on a new line
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    // If multiline props, indent with two spaces
+    "react/jsx-indent-props": ["warn", 2],
+    // Props per line max
+    "react/jsx-max-props-per-line": ["warn", { "maximum":  { "single": 3, "multi": 1 }}],
+    // Remove closing tag on component without children
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": false
+    }],
+    /* ---- React rules ---- */
+    // Align closing bracket to opening tag if multiline props
+    "react/jsx-closing-bracket-location": ["warn", "tag-aligned"],
+    // Enforce good alignement for non-self-closing tags
+    "react/jsx-closing-tag-location": ["warn"],
+    // Disable error in next-env.d.ts
+
+    /* ---- TypeScript rules ---- */
+    "@typescript-eslint/triple-slash-reference": "off",
+    // Disable strict boolean expressions
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    // Disable explicit function return type
+    "@typescript-eslint/explicit-function-return-type": "off",
+    // Prefer double-quoted JSX props
+    "jsx-quotes": ["error", "prefer-double"],
+    // Enable no-console warnings
+
+    /* ---- Genral rules ---- */
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+
+    /* ---- Import rules ---- */
+    // Add new line after all imports
+    "import/newline-after-import": 1,
+    // Sort import
+    "import/order": ["warn", {
+      "alphabetize": { "order": "asc", "caseInsensitive": true },
+      "newlines-between": "always",
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
+      "pathGroups": [
+        { "pattern": "@/**", "group": "internal" }
+      ],
+      "pathGroupsExcludedImportTypes": ["builtin"]
+    }]
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  max-width: var(--bp-xl);
+  padding: 0 var(--spacing-16);
+  margin: 0 auto;
+
+  @media (--md-n-above) {
+    padding: 0 var(--spacing-20);
+  }
+
+  @media (--xl-n-above) {
+    padding: 0 var(--spacing-40);
+  }
+}
+
+:is(.visually-hidden, .sr-only) {
+  overflow: hidden;
+  block-size: 0;
+  inline-size: 0;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

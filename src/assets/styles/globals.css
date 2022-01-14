@@ -1,0 +1,15 @@
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+}
+
+:focus:not(:focus-visible) {
+  box-shadow: var(--ring);
+  outline: none;
+}

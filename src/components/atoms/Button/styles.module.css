@@ -1,0 +1,46 @@
+.button {
+  display: inline-flex;
+  height: 5rem;
+  align-items: center;
+  padding: var(--spacing-24) var(--spacing-32);
+  border: var(--border-size-2) solid transparent;
+  border-radius: var(--radius-3);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.theme-primary {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+
+  &:hover {
+    border-color: var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+  }
+}
+
+.theme-secondary {
+  border-color: var(--color-primary);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+  }
+}
+
+.size-big {
+  height: var(--font-size-5);
+  padding: var(--spacing-32) var(--spacing-40);
+  font-size: 2rem;
+}
+
+.size-jumbo {
+  height: var(--font-size-7);
+  padding: var(--spacing-44) var(--spacing-56);
+  font-size: 3rem;
+}

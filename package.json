@@ -1,0 +1,68 @@
+{
+  "name": "nextjs-poc",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix && stylelint '**/*.css' --fix",
+    "lint:css:": "stylelint --fix ./**/*.css",
+    "storybook": "BROWSER=none start-storybook -p 6006 ./public",
+    "build:storybook": "build-storybook -s public",
+    "build:css-vars": "style-dictionary build --config ./style-dictionary.config.json && npm run css:lint",
+    "build:icons": "npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
+    "prepare": "cd ../ && husky install ./frontend/.husky"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "clsx": "^1.1.1",
+    "focus-visible": "^5.2.0",
+    "next": "12.0.8",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@storybook/addon-essentials": "^6.4.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.4.12",
+    "@storybook/manager-webpack5": "^6.4.12",
+    "@storybook/react": "^6.4.12",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.6.0",
+    "eslint-config-next": "12.0.8",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-storybook": "^0.5.5",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^7.2.3",
+    "storybook-css-modules-preset": "^1.1.1",
+    "style-dictionary": "^3.1.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-standard": "^24.0.0",
+    "typescript": "^4.5.4"
+  },
+  "resolutions": {
+    "webpack": "^5"
+  },
+  "browserslist": [
+    "> 3%",
+    "last 2 versions",
+    "not IE 11"
+  ],
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --max-warnings=0"
+    ],
+    "src/**/*.css": [
+      "stylelint"
+    ]
+  }
+}
