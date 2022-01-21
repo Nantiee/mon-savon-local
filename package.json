@@ -6,10 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix && stylelint '**/*.css' --fix",
-    "lint:css:": "stylelint --fix ./**/*.css",
+    "lint:css": "stylelint --fix ./**/*.css",
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
-    "build:css-vars": "style-dictionary build --config ./style-dictionary.config.json && npm run css:lint",
+    "build:css-vars": "style-dictionary build --config ./style-dictionary.config.json && npm run lint:css",
     "build:icons": "npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
     "prepare": "husky install"
   },
