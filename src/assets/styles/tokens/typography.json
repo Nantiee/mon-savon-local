@@ -1,6 +1,6 @@
 {
   "font": {
-   "sans": { "value": "system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell, noto sans, sans-serif" },
+   "sans": { "value": "Inter, system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell, noto sans, sans-serif" },
    "serif": { "value": "ui-serif, serif" },
    "mono": { "value": "inconsolata, fira mono, ui-monospace, sf mono, monaco, droid sans mono, source code pro, monospace" },
 
