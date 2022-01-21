@@ -11,7 +11,7 @@
     "build:storybook": "build-storybook -s public",
     "build:css-vars": "style-dictionary build --config ./style-dictionary.config.json && npm run css:lint",
     "build:icons": "npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
-    "prepare": "cd ../ && husky install ./frontend/.husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.24.0",
