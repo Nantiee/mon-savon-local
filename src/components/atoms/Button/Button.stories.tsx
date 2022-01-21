@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@/components/atoms/Button'
+import { Button, ButtonProps } from './index'
 
 import type { Story, Meta } from '@storybook/react'
 
