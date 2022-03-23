@@ -10,7 +10,7 @@
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
     "build:css-vars": "style-dictionary build --config ./style-dictionary.config.json && npm run lint:css",
-    "build:icons": "npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
+    "build:icons": "rm -f src/components/icons/* && npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
     "prepare": "husky install"
   },
   "dependencies": {
