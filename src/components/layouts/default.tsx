@@ -1,6 +1,6 @@
 const DefaultLayout: React.FC = ({ children }) => {
   return (
-    <div className="default-layout">
+    <div className='default-layout'>
       {/* Header */}
       <main>
         {children}

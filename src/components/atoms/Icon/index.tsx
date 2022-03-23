@@ -11,7 +11,7 @@ const ReactIcon: React.FC<IconProps> = ({ name, className = '' }) => {
   const Icon: React.ComponentType<{ className: string }> =
     dynamic(async () => await import('@/components/icons').then((mod) => mod[name]))
 
-  return <Icon className={className} aria-hidden={true} />
+  return <Icon className={className} aria-hidden />
 }
 
 export default ReactIcon

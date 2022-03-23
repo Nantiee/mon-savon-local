@@ -17,22 +17,22 @@ const Home: NextPage = () => {
     <div className={clsx(styles.container, 'container')}>
       <div className={styles.logos}>
         <Image
-          src="/img/nextjs.svg"
-          alt="NextJS logo"
+          src='/img/nextjs.svg'
+          alt='NextJS logo'
           width={200}
           height={100}
         />
         <span>+</span>
         <Image
-          src="/img/typescript.svg"
-          alt="Typescript logo"
+          src='/img/typescript.svg'
+          alt='Typescript logo'
           width={80}
           height={80}
         />
         <span>+</span>
         <Image
-          src="/img/storybook.svg"
-          alt="Storybook logo"
+          src='/img/storybook.svg'
+          alt='Storybook logo'
           width={350}
           height={100}
         />
