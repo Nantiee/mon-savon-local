@@ -33,19 +33,19 @@
 - 🔥 Snippets — A collection of useful snippets for React, Next & Storybook.
 
 ## How to run
-This project assumes you have [`yarn`](https://yarnpkg.com/getting-started/install) installed.
+This project assumes you have [`pnpm`](https://pnpm.io/installation) installed.
 
 Commands:
-- `yarn dev` launch dev server.
-- `yarn build` build next for production
-- `yarn start` start NextJS with the production build
-- `yarn link` run ESLint and Stylelint with `--fix`.
-- `yarn storybook` launch storybook dev server.
-- `yarn build:storybook` build storybook for production.
-- `yarn build:css-vars` build variables.css from the design tokens
-- `yarn build:icons` Generate icon components from svg's
+- `pnpm dev` launch dev server.
+- `pnpm build` build next for production
+- `pnpm start` start NextJS with the production build
+- `pnpm link` run ESLint and Stylelint with `--fix`.
+- `pnpm storybook` launch storybook dev server.
+- `pnpm build:storybook` build storybook for production.
+- `pnpm build:css-vars` build variables.css from the design tokens
+- `pnpm build:icons` Generate icon components from svg's
 
-The `prepapre` script ensures git hooks are setup and is automagically run everytime you run `yarn`.  
+The `prepapre` script ensures git hooks are setup and is automagically run everytime you run `pnpm install`.
 Check [husky section](#🐶-husky) for more details.
 
 ## Features Details
@@ -72,7 +72,7 @@ In a perfect world design token would be generated themself from the designer th
 So if you need to update your variables:
 1. Go into `src/assets/styles/tokens`
 2. Edit what you want or even add some values
-3. Run `yarn build:css-vars`
+3. Run `pnpm build:css-vars`
 
 And voilà! You have a freshly generated `variales.css`.
 
@@ -81,7 +81,7 @@ If you want to know more about design token head over: https://amzn.github.io/st
 ### 🧞 SVGR
 SVGR is a tool to allows to generate react components from SVG files.
 
-Put your svg's in `src/assets/icons` and run `yarn build:icons`.
+Put your svg's in `src/assets/icons` and run `pnpm build:icons`.
 
 All svg's within the folder will have a corresponding React component in `src/components/icons`.  
 An `index` file that exports all the icon component is also generated.
@@ -111,11 +111,11 @@ Husky ables us to create hooks that are run when certain git actions are perform
 In this project there are two:
 
 * `post-merge`  
-Run `yarn` to check for added or removed packages.
+Run `pnpm install` to check for added or removed packages.
 * `pre-commit`  
-Run `yarn lint-staged` Lint everything that is staged to ensure code quality.
+Run `pnpm lint-staged` Lint everything that is staged to ensure code quality.
 
-The `prepare` script is automatically run by yarn when running `yarn`, this ensure that the hooks are always installed.
+The `prepare` script is automatically run by pnpm when running `pnpm install`, this ensure that the hooks are always installed.
 
 ### 🗂 VS Code config
 Under `.vscode` your will find multiples files:
