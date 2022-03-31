@@ -2,9 +2,13 @@
   "extends": [
     "standard-with-typescript",
     "standard-jsx",
+    "plugin:jsx-a11y/recommended",
     "standard-react",
     "next/core-web-vitals",
     "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
