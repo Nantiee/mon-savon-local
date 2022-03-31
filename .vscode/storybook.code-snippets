@@ -2,7 +2,7 @@
   "Create Typescript Component Story":{
     "prefix": ["nsbc", "storybookTSComponent"], // new component
     "body": [
-      "import { ${ComponentName}, ${ComponentName}Props } from '${pathToComponent}/${ComponentName}'",
+      "import { ${ComponentName}, ${ComponentName}Props } from './index'",
       "",
       "import type { Story, Meta } from '@storybook/react'",
       "",
