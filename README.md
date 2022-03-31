@@ -18,7 +18,7 @@
 
 ## Features Overview
 - ⚡ NextJS 12
-- ⚛️ React 17
+- ⚛️ React 18
 - 🎉 Typescript
 - 💡 Absolute Import and Path Alias — Import components using `@/` prefix.
 - 💎 PostCSS with **postcss-preset-env** — Write the future of CSS today.
