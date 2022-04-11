@@ -40,6 +40,7 @@ Commands:
 - `pnpm build` build next for production
 - `pnpm start` start NextJS with the production build
 - `pnpm link` run ESLint and Stylelint with `--fix`.
+- `pnpm lint` run ESLint and Stylelint with `--fix`.
 - `pnpm storybook` launch storybook dev server.
 - `pnpm build:storybook` build storybook for production.
 - `pnpm build:css-vars` build variables.css from the design tokens
