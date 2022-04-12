@@ -16,9 +16,5 @@
     "5": { "value": "4rem" },
     "6": { "value": "8rem" },
     "round": { "value": "1e5px" }
-  },
-  "outline": {
-    "focus": { "value": "3px" },
-    "focus-offset": { "value": "1px" }
   }
 }

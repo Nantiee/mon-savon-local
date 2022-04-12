@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 12 Apr 2022 13:16:27 GMT
+ * Generated on Tue, 12 Apr 2022 13:27:02 GMT
  */
 
 :root {
@@ -81,8 +81,6 @@
   --bp-sm: 480px;
   --bp-xs: 360px;
   --bp-xxs: 240px;
-  --outline-focus-offset: 1px;
-  --outline-focus: 3px;
   --radius-round: 1e5px;
   --radius-6: 8rem;
   --radius-5: 4rem;
