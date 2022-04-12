@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 25 Mar 2022 11:34:20 GMT
+ * Generated on Tue, 12 Apr 2022 13:16:27 GMT
  */
 
 :root {
@@ -21,8 +21,8 @@
   --font-lineheight-0: 1.1;
   --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
   --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
-  --font-size-fluid-0: clamp(0.75rem, 2vw, 1rem);
   --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+  --font-size-fluid-0: clamp(0.75rem, 2vw, 1rem);
   --font-size-00: 0.5rem;
   --font-size-base: 1.6rem;
   --font-size-8: 3.5rem;
@@ -36,7 +36,7 @@
   --font-size-0: 0.75rem;
   --font-mono: inconsolata, fira mono, ui-monospace, sf mono, monaco, droid sans mono, source code pro, monospace;
   --font-serif: ui-serif, serif;
-  --font-sans: Inter, system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell, noto sans, sans-serif;
+  --font-sans: Inter, system-ui;
   --spacing-08: 0.8rem;
   --spacing-06: 0.6rem;
   --spacing-04: 0.4rem;
@@ -81,8 +81,8 @@
   --bp-sm: 480px;
   --bp-xs: 360px;
   --bp-xxs: 240px;
-  --ring-inset: inset;
-  --ring-offset-width: 2px;
+  --outline-focus-offset: 1px;
+  --outline-focus: 3px;
   --radius-round: 1e5px;
   --radius-6: 8rem;
   --radius-5: 4rem;
@@ -95,11 +95,4 @@
   --border-size-3: 5px;
   --border-size-2: 2px;
   --border-size-1: 1px;
-  --ring-default: var(--ring-inset) 0 0 0 calc(3px + var(--ring-offset-width)) var(--ring-color);
-  --ring-color: var(--color-primary);
-  --ring-8: var(--ring-inset) 0 0 0 calc(8px + var(--ring-offset-width)) var(--ring-color);
-  --ring-4: var(--ring-inset) 0 0 0 calc(4px + var(--ring-offset-width)) var(--ring-color);
-  --ring-2: var(--ring-inset) 0 0 0 calc(var(--ring-offset-width) + 2px) var(--ring-color);
-  --ring-1: var(--ring-inset) 0 0 0 calc(1px + var(--ring-offset-width)) var(--ring-color);
-  --ring-0: var(--ring-inset) 0 0 0 calc(0px + var(--ring-offset-width)) var(--ring-color);
 }

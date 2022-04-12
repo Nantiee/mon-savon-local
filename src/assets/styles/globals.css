@@ -9,7 +9,13 @@ body {
   font-size: 1.6rem;
 }
 
-:focus:not(:focus-visible) {
-  box-shadow: var(--ring);
-  outline: none;
+:focus {
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+:focus-visible {
+  outline-color: var(--color-primary);
+  outline-offset: var(--outline-focus-offset);
+  outline-width: var(--outline-focus);
 }

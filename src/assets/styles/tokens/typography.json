@@ -1,6 +1,6 @@
 {
   "font": {
-   "sans": { "value": "Inter, system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell, noto sans, sans-serif" },
+   "sans": { "value": "Inter, system-ui" },
    "serif": { "value": "ui-serif, serif" },
    "mono": { "value": "inconsolata, fira mono, ui-monospace, sf mono, monaco, droid sans mono, source code pro, monospace" },
 
@@ -16,8 +16,8 @@
       "6": { "value": "2.5rem" },
       "7": { "value": "3rem" },
       "8": { "value": "3.5rem" },
-      "fluid-1": { "value": "clamp(1rem, 4vw, 1.5rem)" },
       "fluid-0": { "value": "clamp(0.75rem, 2vw, 1rem)" },
+      "fluid-1": { "value": "clamp(1rem, 4vw, 1.5rem)" },
       "fluid-2": { "value": "clamp(1.5rem, 6vw, 2.5rem)" },
       "fluid-3": { "value": "clamp(2rem, 9vw, 3.5rem)" }
     },
