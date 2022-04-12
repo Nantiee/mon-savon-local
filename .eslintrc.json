@@ -17,13 +17,18 @@
     "!.storybook"
   ],
   "rules": {
+    /* --- Regular rules ---*/
+    "no-console": "warn",
+
     /* ---- React rules ---- */
 
     // Props per line max
     "react/jsx-max-props-per-line": [1, { "when":  "multiline" }],
 
     /* ---- TypeScript rules ---- */
+    
 
+    // Disable triple-slash-reference to have access to Next definitions
     "@typescript-eslint/triple-slash-reference": "off",
     // Disable strict boolean expressions
     "@typescript-eslint/strict-boolean-expressions": "off",
