@@ -2,45 +2,48 @@
   display: inline-flex;
   height: 5rem;
   align-items: center;
-  padding: var(--spacing-24) var(--spacing-32);
-  border: var(--border-size-2) solid transparent;
-  border-radius: var(--radius-3);
+  padding: 1rem 1.5rem;
+  border: 2px solid transparent;
   cursor: pointer;
   font-family: var(--font-sans);
-  font-size: var(--font-size-base);
   font-weight: 500;
+  text-decoration: none;
+
+  &:active {
+    user-select: none;
+  }
 }
 
 .theme-primary {
-  background: var(--color-primary);
-  color: var(--color-secondary);
+  background: black;
+  color: white;
 
   &:hover {
-    border-color: var(--color-primary);
+    border-color: black;
     background: transparent;
-    color: var(--color-primary);
+    color: black;
   }
 }
 
 .theme-secondary {
-  border-color: var(--color-primary);
-  background: var(--color-secondary);
-  color: var(--color-primary);
+  border-color: black;
+  background: white;
+  color: black;
 
   &:hover {
-    background: var(--color-primary);
-    color: var(--color-secondary);
+    background: black;
+    color: white;
   }
 }
 
 .size-big {
-  height: var(--font-size-5);
-  padding: var(--spacing-32) var(--spacing-40);
+  height: 7rem;
+  padding: 1.5rem 2.25rem;
   font-size: 2rem;
 }
 
 .size-jumbo {
-  height: var(--font-size-7);
-  padding: var(--spacing-44) var(--spacing-56);
+  height: 10rem;
+  padding: 2rem 3rem;
   font-size: 3rem;
 }

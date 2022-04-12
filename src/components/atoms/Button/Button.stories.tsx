@@ -1,17 +1,17 @@
-import { Button, ButtonProps } from './index'
+import Button from './index'
 
 import type { Story, Meta } from '@storybook/react'
 
+type ButtonProps = React.ComponentProps<typeof Button>
+
 const ButtonStory: Meta<ButtonProps> = {
-  title: 'components/Button',
+  title: 'Components/Button',
   component: Button,
-  argTypes: {
-    children: {
-      defaultValue: 'A button',
-      control: 'text'
-    },
-    theme: { defaultValue: 'primary' },
-    size: { defaultValue: 'default' }
+  args: {
+    theme: 'primary',
+    size: 'default',
+    children: 'A button',
+    onClick: () => { alert('onClick!') }
   }
 }
 
@@ -20,24 +20,3 @@ export default ButtonStory
 const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
 export const Default = Template.bind({})
-
-export const Primary = Template.bind({})
-
-Primary.args = {
-  theme: 'primary'
-}
-
-export const Secondary = Template.bind({})
-Secondary.args = {
-  theme: 'secondary'
-}
-
-export const Big = Template.bind({})
-Big.args = {
-  size: 'big'
-}
-
-export const Jumbo = Template.bind({})
-Jumbo.args = {
-  size: 'jumbo'
-}
