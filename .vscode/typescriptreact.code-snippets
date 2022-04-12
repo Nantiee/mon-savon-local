@@ -29,12 +29,15 @@
   "Create Typescript React Functional Component":{
     "prefix": ["nc"], // new component
     "body": [
-      "export interface ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props {",
+      "interface ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props {",
       "}",
       "",
-      "export const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}: React.FC<${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props> = () => {",
+      "/**",
+      "* General component description in JSDoc format. Markdown is *supported*.",
+      "*/",
+      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}: React.FC<${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props> = () => {",
       "  return (",
-      "    <div>$3</div>",
+      "    <div>${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}</div>",
       "  )",
       "}",
       "",
