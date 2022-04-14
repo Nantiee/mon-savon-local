@@ -16,10 +16,11 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   size = DEFAULT_SHARED_PROPS.size,
   theme = DEFAULT_SHARED_PROPS.theme,
   children,
+  className,
   href,
   ...props
 }) => {
-  const classNames = buttonClassNames({ size, theme })
+  const classNames = buttonClassNames({ className, size, theme })
 
   return (
     <Link href={href as string} passHref>

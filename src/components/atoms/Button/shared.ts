@@ -13,9 +13,10 @@ export interface DefaultProps {
    * @default 'primary'
    */
   theme?: 'primary' | 'secondary'
+  className?: string
 }
 
-type RequiredDefaultProps = Required<DefaultProps>
+type RequiredDefaultProps = Required<Pick<DefaultProps, 'size' | 'theme'>> & DefaultProps
 
 export const DEFAULT_SHARED_PROPS: RequiredDefaultProps = {
   size: 'default',
@@ -24,11 +25,13 @@ export const DEFAULT_SHARED_PROPS: RequiredDefaultProps = {
 
 export const buttonClassNames = ({
   size = DEFAULT_SHARED_PROPS.size,
-  theme = DEFAULT_SHARED_PROPS.theme
+  theme = DEFAULT_SHARED_PROPS.theme,
+  className
 }: RequiredDefaultProps) => {
   return clsx([
     styles.button,
     styles[`size-${size}`],
-    styles[`theme-${theme}`]
+    styles[`theme-${theme}`],
+    className
   ])
 }
