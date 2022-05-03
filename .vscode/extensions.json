@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
     "csstools.postcss",
-    "phoenisx.cssvar"
+    "phoenisx.cssvar",
+    "YuTengjing.vscode-colorize-plus"
   ]
 }
