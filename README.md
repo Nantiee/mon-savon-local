@@ -104,7 +104,7 @@ ESlint and stylelint find and fix your code but also ensure a standard coding st
   - [plugin:storybook/recommended](https://github.com/storybookjs/eslint-plugin-storybook) to lint your storybook stories.
 - Stylelint enforce and fixes your CSS with:
   - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) to enforce coding style.
-  - [stylelint-config-idiomatic-order](https://github.com/ream88/stylelint-config-idiomatic-order) to order the properties in a consistent way.
+  - [stylelint-config-recess-order](https://github.com/stormwarning/stylelint-config-recess-order) to order the properties in a consistent way.
 
 ### 🐶 Husky
 Husky ables us to create hooks that are run when certain git actions are performed.
