@@ -35,7 +35,7 @@
       "/**",
       "* General component description in JSDoc format. Markdown is *supported*.",
       "*/",
-      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}: React.FC<${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props> = () => {",
+      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}} = ({}: ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props) => {",
       "  return (",
       "    <div>${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}</div>",
       "  )",

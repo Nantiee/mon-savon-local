@@ -7,7 +7,7 @@ interface IconProps {
   className?: string
 }
 
-const ReactIcon: React.FC<IconProps> = ({ name, className = '' }) => {
+const ReactIcon = ({ name, className = '' }: IconProps) => {
   const Icon: React.ComponentType<{ className: string }> =
     dynamic(async () => await import('@/components/icons').then((mod) => mod[name]))
 

@@ -1,4 +1,4 @@
-const DefaultLayout: React.FC = ({ children }) => {
+const DefaultLayout = ({ children }) => {
   return (
     <div className='default-layout'>
       {/* Header */}

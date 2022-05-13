@@ -12,14 +12,14 @@ type ButtonLinkProps = DefaultProps & React.AnchorHTMLAttributes<HTMLAnchorEleme
  *
  * `import { ButtonLink } from 'path/to/Button'`
  */
-const ButtonLink: React.FC<ButtonLinkProps> = ({
+const ButtonLink = ({
   size = DEFAULT_SHARED_PROPS.size,
   theme = DEFAULT_SHARED_PROPS.theme,
   children,
   className,
   href,
   ...props
-}) => {
+}: ButtonLinkProps) => {
   const classNames = buttonClassNames({ className, size, theme })
 
   return (
