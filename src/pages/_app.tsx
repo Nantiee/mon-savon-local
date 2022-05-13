@@ -1,7 +1,7 @@
 import '@/assets/styles/main.css'
 import 'focus-visible'
 
-import DefaultLayout from '@/components/layouts/default'
+import DefaultLayout from '@/components/layouts/Default'
 
 import type { AppProps } from 'next/app'
 
