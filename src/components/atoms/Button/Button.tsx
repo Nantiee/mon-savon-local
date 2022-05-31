@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { DefaultProps, buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
 
 type ButtonProps = DefaultProps & React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -19,8 +17,6 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const classNames = buttonClassNames({ className, size, theme })
-
-  const lzd = useState(false)
 
   return (
     <button
