@@ -1,6 +1,6 @@
 {
   "extends": [
-    "standard-with-typescript",
+    "standard",
     "standard-jsx",
     "plugin:jsx-a11y/recommended",
     "standard-react",
