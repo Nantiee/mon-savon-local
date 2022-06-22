@@ -7,16 +7,12 @@
     "next/core-web-vitals",
     "plugin:storybook/recommended"
   ],
-  "plugins": [
-    "jsx-a11y"
-  ],
+  "plugins": ["jsx-a11y"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": [
-    "!.storybook"
-  ],
+  "ignorePatterns": ["!.storybook"],
   "rules": {
     /* --- Regular rules ---*/
     "no-console": "warn",
@@ -26,10 +22,10 @@
     /* ---- React rules ---- */
 
     // Props per line max
-    "react/jsx-max-props-per-line": [1, { "when":  "multiline" }],
+    "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
 
     /* ---- TypeScript rules ---- */
-    
+
     // Disable triple-slash-reference to have access to Next definitions
     "@typescript-eslint/triple-slash-reference": "off",
     // Disable strict boolean expressions
@@ -42,14 +38,23 @@
     // Add new line after all imports
     "import/newline-after-import": 1,
     // Sort import
-    "import/order": ["warn", {
-      "alphabetize": { "order": "asc", "caseInsensitive": true },
-      "newlines-between": "always",
-      "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
-      "pathGroups": [
-        { "pattern": "@/**", "group": "internal" }
-      ],
-      "pathGroupsExcludedImportTypes": ["builtin"]
-    }]
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "type"
+        ],
+        "pathGroups": [{ "pattern": "@/**", "group": "internal" }],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ]
   }
 }

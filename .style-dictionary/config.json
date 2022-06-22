@@ -3,12 +3,20 @@
   "platforms": {
     "css": {
       "transformGroup": "css",
-      "transforms": ["attribute/cti", "name/cti/kebab", "time/seconds", "content/icon", "size/rem"], 
+      "transforms": [
+        "attribute/cti",
+        "name/cti/kebab",
+        "time/seconds",
+        "content/icon",
+        "size/rem"
+      ],
       "buildPath": "src/assets/styles/",
-      "files": [{
-        "destination": "variables.css",
-        "format": "css/variables"
-      }],
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables"
+        }
+      ],
       "options": {
         "outputReferences": true
       }

@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "next lint --fix && stylelint '**/*.css' --fix",
     "lint:css": "stylelint --fix ./**/*.css",
+    "prettier": "prettier --write **/*.json",
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
     "build:css-vars": "node .style-dictionary/build.js npm run lint:css",
@@ -55,6 +56,7 @@
     "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
     "postcss-preset-env": "^7.7.1",
+    "prettier": "^2.7.1",
     "storybook-css-modules-preset": "^1.1.1",
     "style-dictionary": "^3.7.1",
     "stylelint": "^14.9.1",
@@ -75,6 +77,9 @@
     ],
     "src/**/*.css": [
       "stylelint"
+    ],
+    "src/**/*.json": [
+      "prettier --write **/*.json"
     ]
   }
 }

@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-recess-order"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
   "rules": {
     "no-descending-specificity": null,
     "max-line-length": [120, { "ignore": ["comments"] }]

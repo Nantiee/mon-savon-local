@@ -1,10 +1,12 @@
 {
   "font": {
-   "sans": { "value": "Inter, system-ui" },
-   "serif": { "value": "ui-serif, serif" },
-   "mono": { "value": "inconsolata, fira mono, ui-monospace, sf mono, monaco, droid sans mono, source code pro, monospace" },
+    "sans": { "value": "\"Inter\", system-ui" },
+    "serif": { "value": "ui-serif, serif" },
+    "mono": {
+      "value": "inconsolata, fira mono, ui-monospace, sf mono, monaco, droid sans mono, source code pro, monospace"
+    },
 
-    "size":{
+    "size": {
       "base": { "value": "1.6rem" },
       "00": { "value": "0.5rem" },
       "0": { "value": "0.75rem" },

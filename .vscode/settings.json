@@ -5,7 +5,5 @@
     "source.fixAll.stylelint": true
   },
   "editor.tabSize": 2,
-  "cssvar.files": [
-    "src/assets/styles/variables.css"
-  ]
+  "cssvar.files": ["src/assets/styles/variables.css"]
 }
