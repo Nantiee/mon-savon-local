@@ -13,12 +13,12 @@ body {
 }
 
 :focus {
-  outline-color: transparent;
   outline-style: solid;
+  outline-color: transparent;
 }
 
 :focus-visible {
+  outline-width: var(--outline-focus-width);
   outline-color: var(--color-primary);
   outline-offset: var(--outline-focus-offset);
-  outline-width: var(--outline-focus-width);
 }

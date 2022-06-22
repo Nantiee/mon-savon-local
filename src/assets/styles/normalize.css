@@ -147,8 +147,8 @@ Tabular data
 */
 
 table {
-  border-color: inherit; /* 2 */
   text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
 }
 
 /*
