@@ -23,7 +23,7 @@ const ButtonLink = ({
   const classNames = buttonClassNames({ className, size, theme })
 
   return (
-    <Link href={href as string} passHref>
+    <Link href={href as string}>
       <a
         className={classNames}
         {...props}
