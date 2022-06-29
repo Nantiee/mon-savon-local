@@ -9,7 +9,7 @@
       "type ${ComponentName}Props = React.ComponentProps<typeof ${ComponentName}>",
       "",
       "const ${ComponentName}Story: Meta<${ComponentName}Props> = {",
-      "  title: '${Component}/${ComponentName}',",
+      "  title: '${Components}/${ComponentName}',",
       "  component: ${ComponentName},",
       "  args: {",
       "    children: '${ComponentName}'",
