@@ -2,8 +2,6 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
-    "phoenisx.cssvar",
-    "yutengjing.vscode-colorize-plus",
-    "vunguyentuan.vscode-postcss"
+    "phoenisx.cssvar"
   ]
 }
