@@ -18,7 +18,8 @@
       "",
       "export default ${ComponentName}Story",
       "",
-      "const Template: Story<${ComponentName}Props> = (args) => <${ComponentName} {...args} />",
+      "const Template: Story<${ComponentName}Props> = (args) =>",
+      "  <${ComponentName} {...args}>${Children}</${ComponentName}>",
       "",
       "export const Default = Template.bind({})",
       ""
