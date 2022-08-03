@@ -1,20 +1,21 @@
 # NextJS Typescript Boilerplate
 🚀 NextJS + Typescript + Storybook production ready boilerplate.
 
-- [Features Overview](#features)
-- [How to run](#how-to-run)
-- [Features details](#features-details)
-  - [PostCSS + postcss-preset-env](#💎-postcss-+-postcss-preset-env)
-  - [Style-dictionnary](#🎨-style-dictionnary)
-  - [SVGR](#🧞-svgr)
-  - [Next SEO](#🤖-next-seo)
-  - [ESlint & Stylelint](#📏-eslint-&-stylelint)
-  - [Husky](#🐶-husky)
-  - [VS Code config](#🗂-vs-code-config)
-  - [Snippets](#🔥-snippets)
-- [Components Guildelines](#components-guildelines)
-  - [Component Directory Structure](#component-directory-structure)
-  - [CSS Modules](#css-modules)
+* [Features Overview](#features-overview)
+* [How to run](#how-to-run)
+* [Features Details](#features-details)
+  * [💎 PostCSS + postcss-preset-env](#-postcss--postcss-preset-env)
+  * [🎨 Style-dictionary](#-style-dictionary)
+  * [🧞 SVGR](#-svgr)
+  * [🤖 Next SEO](#-next-seo)
+  * [📏 ESlint & Stylelint](#-eslint--stylelint)
+  * [🐶 Husky](#-husky)
+  * [🗂 VS Code config](#-vs-code-config)
+  * [🔥 VS Code Snippets](#-vs-code-snippets)
+* [Components Guidelines](#components-guidelines)
+  * [File Naming](#file-naming)
+  * [Component Directory Structure](#component-directory-structure)
+  * [CSS Modules](#css-modules)
 
 ## Features Overview
 - ⚡ NextJS 12
@@ -22,7 +23,7 @@
 - 🎉 Typescript
 - 💡 Absolute Import and Path Alias — Import components using `@/` prefix.
 - 💎 PostCSS with **postcss-preset-env** — Write the future of CSS today.
-- 🎨 Style-dictionnary — Generate your CSS Custom properties from **design tokens**.
+- 🎨 Style-dictionary — Generate your CSS Custom properties from **design tokens**.
 - 🧞 SVGR — Automatic Icon Component Generation.
 - 🤖 Next SEO — SEO metadata, JSON-LD and Open Graph tags.
 - 📏 ESLint — Find and fix problems in your JS/TS, also will **auto-sort** your imports.
@@ -46,7 +47,7 @@ Commands:
 - `pnpm build:css-vars` build variables.css from the design tokens
 - `pnpm build:icons` Generate icon components from svg's
 
-The `prepapre` script ensures git hooks are setup and is automagically run everytime you run `pnpm install`.
+The `prepapre` script ensures git hooks are set up and is automagically run everytime you run `pnpm install`.
 Check [husky section](#🐶-husky) for more details.
 
 ## Features Details
@@ -65,10 +66,10 @@ The SASS tagline is "CSS with superpowers" and it's true, but SASS was released 
 
 So the philosophy is why write CSS with a preprocessor while you can do pretty much the same with regular CSS ?
 
-### 🎨 Style-dictionnary
-Style-dictionnary is a tool that allows you to generate CSS custom properties (CSS vars) from design tokens.
+### 🎨 Style-dictionary
+Style-dictionary is a tool that allows you to generate CSS custom properties (CSS vars) from design tokens.
 
-In a perfect world design token would be generated themself from the designer then we would have to import the file and generate our properties from it.
+In a perfect world design token would be generated from the designer themselves then we would have to import the file and generate our properties from it.
 
 So if you need to update your variables:
 1. Go into `src/assets/styles/tokens`
@@ -94,7 +95,7 @@ There is a pre-made `Icon` component under `src/components/atoms/Icon` that can 
 
 ### 📏 ESlint & Stylelint
 All code in any code-base should look like a single person typed it, even when many people are contributing to it.  
-That's why ESlint & Stylelint are setup with **strong rules** to enforce a standard coding style for all.
+That's why ESlint & Stylelint are set up with **strong rules** to enforce a standard coding style for all.
 
 ESlint and stylelint find and fix your code but also ensure a standard coding style is applied.
 
@@ -116,7 +117,7 @@ Run `pnpm install` to check for added or removed packages.
 * `pre-commit`  
 Run `pnpm lint-staged` Lint everything that is staged to ensure code quality.
 
-The `prepare` script is automatically run by pnpm when running `pnpm install`, this ensure that the hooks are always installed.
+The `prepare` script is automatically run by pnpm when running `pnpm install`, this ensures that the hooks are always installed.
 
 ### 🗂 VS Code config
 Under `.vscode` your will find multiples files:
@@ -124,10 +125,10 @@ Under `.vscode` your will find multiples files:
 - extensions — Recommended extensions for the project.
 - settings.json — Settings for the project & recommended extensions.
 - launch.json — Allows you to launch a debug session right in VS Code under the debug tab.
-- typescriptreact.code-snippets — Define some useful react [snippets](#🔥-snippets)
-- storybook.code-snippets — Define a useful storybook [snippets](#🔥-snippets)
+- typescriptreact.code-snippets — Define some useful react [snippets](#-vs-code-snippets)
+- storybook.code-snippets — Define a useful storybook [snippets](#-vs-code-snippets)
 
-### 🔥 Snippets
+### 🔥 VS Code Snippets
 - React Snippets
   - `ir` — import React
   - `us` — useState
@@ -153,7 +154,7 @@ Under `.vscode` your will find multiples files:
 
 ---
 
-## Components Guildelines
+## Components Guidelines
 
 ### File Naming
 Component files should be in `PascalCase.tsx`.
@@ -167,9 +168,10 @@ The components directory as the following structure:
 - molecules — Like a card
 - organisms — Like a whole section
 - blocks — Components that are only once per page like a header / footer / hero
+- forms — Any form component form, inputs, group, etc.
 - hoc — High Order Components
 - layouts — Contains header / footer
-- icons — Icons that are generated with [SVGR](#🧞-svgr).
+- icons — Icons that are generated with [SVGR](#-svgr).
 
 ### CSS Modules
 Components should use CSS modules for their styles.
