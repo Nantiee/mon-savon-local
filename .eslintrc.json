@@ -1,17 +1,21 @@
 {
   "extends": [
-    "standard",
+    "standard-with-typescript",
     "standard-jsx",
-    "plugin:jsx-a11y/recommended",
     "standard-react",
     "next/core-web-vitals",
     "plugin:storybook/recommended"
   ],
-  "plugins": ["jsx-a11y"],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ],
   "ignorePatterns": ["!.storybook"],
   "rules": {
     /* --- Regular rules ---*/
