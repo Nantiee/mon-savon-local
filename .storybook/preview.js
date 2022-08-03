@@ -3,7 +3,7 @@ import '../src/assets/styles/main.css'
 import * as NextImage from 'next/image'
 
 /**
- * Unoptimized verison of Next Image component
+ * Unoptimized version of Next Image component
  * @see https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
  */
 const OriginalNextImage = NextImage.default
@@ -25,5 +25,6 @@ export const parameters = {
   previewTabs: {
     // Setting the docs tab before the canvas tab
     'storybook/docs/panel': { index: -1 }
-  }
+  },
+  viewMode: 'docs'
 }
