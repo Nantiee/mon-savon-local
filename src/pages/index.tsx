@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import styles from '@/assets/styles/pages/Home.module.css'
+import Icon from '@/components/atoms/Icon'
 
 import type { NextPage } from 'next'
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
           width={200}
           height={100}
         />
+        <Icon name='arrow-right' />
         <span>+</span>
         <Image
           src='/img/typescript.svg'

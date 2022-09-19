@@ -1,17 +1,19 @@
-import dynamic from 'next/dynamic'
+import clsx from 'clsx'
 
-import type { IconName } from '@/types/icons'
+import styles from './styles.module.css'
 
 interface IconProps {
-  name: IconName
+  name: string
   className?: string
 }
 
-const DynamicIcon = ({ name, className = '' }: IconProps) => {
-  const Icon: React.ComponentType<{ className: string }> =
-    dynamic(async () => await import('@/components/icons').then((mod) => mod[name]))
-
-  return <Icon className={className} aria-hidden />
+const Icon = ({ name, className = '' }: IconProps) => {
+  const classNames = clsx(styles.icon, className)
+  return (
+    <svg className={classNames}>
+      <use href={`icons.svg#${name}`} />
+    </svg>
+  )
 }
 
-export default DynamicIcon
+export default Icon

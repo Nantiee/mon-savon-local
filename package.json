@@ -1,5 +1,9 @@
 {
-  "name": "nextjs-poc",
+  "name": "nextjs-typescript-boilerplate",
+  "author": {
+    "email": "alexis.walravens@iodigital.com",
+    "name": "Alexis Walravens"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,12 +15,12 @@
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
     "build:css-vars": "style-dictionary build --config ./.style-dictionary/config.json  && pnpm lint:css",
-    "build:icons": "rm -f src/components/icons/* && npx @svgr/cli -d src/components/icons src/assets/icons && eslint --fix src/components/icons",
+    "build:icons": "svg-sprite -s --symbol-dest public --symbol-sprite icons.svg src/assets/icons/*.svg",
     "prepare": "husky install"
   },
   "engines": {
     "node": ">=16.0.0",
-    "pnpm": ">=7.0.0",
+    "pnpm": ">=7.9.0",
     "yarn": "Please-use-pnpm-instead",
     "npm": "Please-use-pnpm-instead"
   },

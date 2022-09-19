@@ -1,17 +1,14 @@
 # NextJS Typescript Boilerplate
 🚀 NextJS + Typescript + Storybook production ready boilerplate.
 
-* [Features Overview](#features-overview)
-* [How to run](#how-to-run)
-* [Features Details](#features-details)
-  * [💎 PostCSS + postcss-preset-env](#-postcss--postcss-preset-env)
-  * [🎨 Style-dictionary](#-style-dictionary)
-  * [🧞 SVGR](#-svgr)
-  * [🤖 Next SEO](#-next-seo)
-  * [📏 ESlint & Stylelint](#-eslint--stylelint)
-  * [🐶 Husky](#-husky)
-  * [🗂 VS Code config](#-vs-code-config)
-  * [🔥 VS Code Snippets](#-vs-code-snippets)
+* [💎 PostCSS + postcss-preset-env](#-postcss--postcss-preset-env)
+* [🎨 Style-dictionary](#-style-dictionary)
+* [🧞 Icons with svg-sprite](#-icons-with-svg-sprite)
+* [🤖 Next SEO](#-next-seo)
+* [📏 ESlint & Stylelint](#-eslint--stylelint)
+* [🐶 Husky](#-husky)
+* [🗂 VS Code config](#-vs-code-config)
+* [🔥 VS Code Snippets](#-vs-code-snippets)
 * [Components Guidelines](#components-guidelines)
   * [File Naming](#file-naming)
   * [Component Directory Structure](#component-directory-structure)
@@ -21,10 +18,11 @@
 - ⚡ NextJS 12
 - ⚛️ React 18
 - 🎉 Typescript
+- 🍬 Storybook (now with Vite builder ⚡)
 - 💡 Absolute Import and Path Alias — Import components using `@/` prefix.
 - 💎 PostCSS with **postcss-preset-env** — Write the future of CSS today.
 - 🎨 Style-dictionary — Generate your CSS Custom properties from **design tokens**.
-- 🧞 SVGR — Automatic Icon Component Generation.
+- 🧞 Icons with svg-sprite — Automatic Icon sprite with an Icon component.
 - 🤖 Next SEO — SEO metadata, JSON-LD and Open Graph tags.
 - 📏 ESLint — Find and fix problems in your JS/TS, also will **auto-sort** your imports.
 - 📐 Stylelint — Enforce coding style for CSS and **auto-sort** properties.
@@ -45,7 +43,7 @@ Commands:
 - `pnpm storybook` launch storybook dev server.
 - `pnpm build:storybook` build storybook for production.
 - `pnpm build:css-vars` build variables.css from the design tokens
-- `pnpm build:icons` Generate icon components from svg's
+- `pnpm build:icons` Generate icons sprite from svg's
 
 The `prepapre` script ensures git hooks are set up and is automagically run everytime you run `pnpm install`.
 Check [husky section](#🐶-husky) for more details.
@@ -80,15 +78,18 @@ And voilà! You have a freshly generated `variales.css`.
 
 If you want to know more about design token head over: https://amzn.github.io/style-dictionary/#/tokens
 
-### 🧞 SVGR
-SVGR is a tool to allows to generate react components from SVG files.
+### 🧞 Icons with svg-sprite
+[`svg-sprite`](https://github.com/svg-sprite/svg-sprite) is a tool that allows to generate a svg sprite from svg files.
 
 Put your svg's in `src/assets/icons` and run `pnpm build:icons`.
 
-All svg's within the folder will have a corresponding React component in `src/components/icons`.  
-An `index` file that exports all the icon component is also generated.
+All svg's within the folder will be in the newly generated sprite.
 
-There is a pre-made `Icon` component under `src/components/atoms/Icon` that can dynamically import icons with its `name` prop. The name prop is **automatically typed** with all the possible icons components.
+There is a pre-made `Icon` component under `src/components/atoms/Icon`.  
+Use it with the name of the svg file you to display as the `name`prop.
+```jsx
+<Icon name='arrow-right' />
+```
 
 ### 🤖 Next SEO
 [Next SEO](https://github.com/garmeeh/next-seo) allows you to set SEO metadata, JSON-LD and Open Graph tags very easily, check the docs to see how to use it.
@@ -171,7 +172,6 @@ The components directory as the following structure:
 - forms — Any form component form, inputs, group, etc.
 - hoc — High Order Components
 - layouts — Contains header / footer
-- icons — Icons that are generated with [SVGR](#-svgr).
 
 ### CSS Modules
 Components should use CSS modules for their styles.

@@ -1,5 +1,3 @@
-import * as icons from '@/components/icons'
-
 import Icon from './index'
 
 import type { Story, Meta } from '@storybook/react'
@@ -10,14 +8,8 @@ const IconStory: Meta<IconProps> = {
   title: 'Atoms/Icon',
   component: Icon,
   args: {
-    name: 'ArrowRight',
+    name: 'arrow-right',
     className: ''
-  },
-  argTypes: {
-    name: {
-      options: Object.keys(icons),
-      control: { type: 'select' }
-    }
   }
 }
 
