@@ -30,7 +30,6 @@
     "the-new-css-reset": "^1.7.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.1",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-vite": "^0.2.2",
@@ -40,7 +39,6 @@
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
-    "babel-loader": "^8.2.5",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "eslint-config-standard-jsx": "^11.0.0",
