@@ -7,11 +7,11 @@ interface IconProps {
   className?: string
 }
 
-const ReactIcon = ({ name, className = '' }: IconProps) => {
+const DynamicIcon = ({ name, className = '' }: IconProps) => {
   const Icon: React.ComponentType<{ className: string }> =
     dynamic(async () => await import('@/components/icons').then((mod) => mod[name]))
 
   return <Icon className={className} aria-hidden />
 }
 
-export default ReactIcon
+export default DynamicIcon
