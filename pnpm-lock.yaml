@@ -40,6 +40,7 @@ specifiers:
   stylelint: ^14.11.0
   stylelint-config-recess-order: ^3.0.0
   stylelint-config-standard: ^28.0.0
+  the-new-css-reset: ^1.7.3
   tinycolor2: ^1.4.2
   typescript: ^4.8.2
   webpack: 5.74.0
@@ -53,6 +54,7 @@ dependencies:
   next-seo: 5.5.0_3xcjr4wz26biff45sz3jtokgje
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  the-new-css-reset: 1.7.3
 
 devDependencies:
   '@babel/core': 7.19.0
@@ -12202,6 +12204,10 @@ packages:
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
+
+  /the-new-css-reset/1.7.3:
+    resolution: {integrity: sha512-AiDZRlaS6ccC6CVHMEg+DQyZwfO0/KUvsz+vwmoOw9MlyNv/CaiOEhV1W3iw8ajQbWF0sXWYYhdKGMlCNyILPA==}
+    dev: false
 
   /through/2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
