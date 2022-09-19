@@ -1,5 +1,8 @@
 const path = require('path')
 
+const { mergeConfig } = require('vite')
+const tsconfigPaths = require('vite-tsconfig-paths').default
+
 module.exports = {
   stories: [
     '../src/**/*.stories.mdx',
@@ -22,31 +25,16 @@ module.exports = {
     }
   ],
   framework: '@storybook/react',
-  core: {
-    builder: 'webpack5'
-  },
-  webpackFinal: (config) => {
-    /**
-     * Add support for alias-imports
-     * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
-     */
-    config.resolve.alias = {
-      ...config.resolve?.alias,
-      '@/helpers': path.resolve(__dirname, '../src/lib/helpers'),
-      '@/services': path.resolve(__dirname, '../src/lib/services'),
-      '@/hooks': path.resolve(__dirname, '../src/lib/hooks'),
-      '@': [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../')]
-    }
-
-    /**
-     * Fixes font import with /
-     * @see https://github.com/storybookjs/storybook/issues/12844#issuecomment-867544160
-     */
-    config.resolve.roots = [
-      path.resolve(__dirname, '../public'),
-      'node_modules'
-    ]
-
-    return config
+  core: { builder: '@storybook/builder-vite' },
+  async viteFinal (config, { configType }) {
+    // return the customized config
+    return mergeConfig(config, {
+      // customize the Vite config here
+      plugins: [
+        tsconfigPaths({
+          root: path.resolve(path.resolve(__dirname, '../'))
+        })
+      ]
+    })
   }
 }
