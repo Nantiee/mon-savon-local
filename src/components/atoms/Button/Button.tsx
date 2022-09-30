@@ -1,4 +1,6 @@
-import { DefaultProps, buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
+import { buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
+
+import type { DefaultProps } from './shared'
 
 type ButtonProps = DefaultProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 

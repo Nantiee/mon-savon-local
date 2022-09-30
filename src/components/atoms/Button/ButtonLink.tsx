@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 
-import { DefaultProps, buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
+import { buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
+
+import type { DefaultProps } from './shared'
 
 type ButtonLinkProps = DefaultProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 

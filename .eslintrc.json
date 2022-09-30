@@ -13,6 +13,19 @@
 
       "parserOptions": {
         "project": "./tsconfig.json"
+      },
+      "rules": {
+        /* ---- TypeScript rules ---- */
+
+        // Disable triple-slash-reference to have access to Next definitions
+        "@typescript-eslint/triple-slash-reference": "off",
+        // Disable strict boolean expressions
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        // Disable explicit function return type
+        "@typescript-eslint/explicit-function-return-type": "off",
+        // Force add `type` when importing/exporting types
+        "@typescript-eslint/consistent-type-imports": "warn",
+        "@typescript-eslint/consistent-type-exports": "warn"
       }
     }
   ],
@@ -27,15 +40,6 @@
 
     // Props per line max
     "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
-
-    /* ---- TypeScript rules ---- */
-
-    // Disable triple-slash-reference to have access to Next definitions
-    "@typescript-eslint/triple-slash-reference": "off",
-    // Disable strict boolean expressions
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    // Disable explicit function return type
-    "@typescript-eslint/explicit-function-return-type": "off",
 
     /* ---- Import rules ---- */
 
