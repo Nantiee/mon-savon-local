@@ -29,13 +29,15 @@
   "Create Typescript React Functional Component":{
     "prefix": ["nc"], // new component
     "body": [
+      "// import styles from './styles.module.css'",
+      "",
       "interface ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props {",
       "}",
       "",
       "/**",
       "* General component description in JSDoc format. Markdown is *supported*.",
       "*/",
-      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}} = ({}: ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props) => {",
+      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}: React.FC<${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Props> = ({}) => {",
       "  return (",
       "    <div>${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}</div>",
       "  )",
@@ -72,11 +74,11 @@
     "body": [
       "import { NextApiRequest, NextApiResponse } from 'next'\n",
       "export default function ${1:${TM_FILENAME_BASE}}(req: NextApiRequest, res: NextApiResponse) {",
-      "  if (req.method === 'GET') {",
-      "    res.status(200).json({ name: 'Bambang' })",
-      "  } else {",
+      "  if (req.method !== 'GET') {",
       "    res.status(405).json({ message: 'Method Not Allowed' })",
       "  }",
+      "",
+      "  res.status(200).json({ name: 'Bambang' })",
       "}"
     ]
   },
