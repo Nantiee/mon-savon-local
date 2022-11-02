@@ -11,13 +11,13 @@ type ButtonProps = DefaultProps & React.ButtonHTMLAttributes<HTMLButtonElement>
  *
  * `import Button from 'path/to/Button'` or `import { Button } from 'path/to/Button'`
  */
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   size = DEFAULT_SHARED_PROPS.size,
   theme = DEFAULT_SHARED_PROPS.theme,
   children,
   className,
   ...props
-}: ButtonProps) => {
+}) => {
   const classNames = buttonClassNames({ className, size, theme })
 
   return (

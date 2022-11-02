@@ -7,7 +7,7 @@ interface IconProps {
   className?: string
 }
 
-const Icon = ({ name, className = '' }: IconProps) => {
+const Icon: React.FC<IconProps> = ({ name, className = '' }) => {
   const classNames = clsx(styles.icon, className)
   return (
     <svg className={classNames}>

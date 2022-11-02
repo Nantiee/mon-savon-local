@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -17,12 +21,32 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/helpers/*": ["./src/lib/helpers/*"],
-      "@/services/*": ["./src/lib/services/*"],
-      "@/hooks/*": ["./src/lib/hooks/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "@/helpers/*": [
+        "./src/lib/helpers/*"
+      ],
+      "@/services/*": [
+        "./src/lib/services/*"
+      ],
+      "@/hooks/*": [
+        "./src/lib/hooks/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

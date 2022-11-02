@@ -5,8 +5,8 @@
   --outline-focus-width: 3px;
 }
 
-body {
-  font-family: var(--font-sans);
+main {
+  height: 100vh;
 }
 
 :focus {

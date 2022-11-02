@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 
 import { buttonClassNames, DEFAULT_SHARED_PROPS } from './shared'
@@ -14,24 +13,23 @@ type ButtonLinkProps = DefaultProps & React.AnchorHTMLAttributes<HTMLAnchorEleme
  *
  * `import { ButtonLink } from 'path/to/Button'`
  */
-const ButtonLink = ({
+const ButtonLink: React.FC<ButtonLinkProps> = ({
   size = DEFAULT_SHARED_PROPS.size,
   theme = DEFAULT_SHARED_PROPS.theme,
   children,
   className,
   href,
   ...props
-}: ButtonLinkProps) => {
+}) => {
   const classNames = buttonClassNames({ className, size, theme })
 
   return (
-    <Link href={href as string}>
-      <a
-        className={classNames}
-        {...props}
-      >
-        {children}
-      </a>
+    <Link
+      href={href as string}
+      className={classNames}
+      {...props}
+    >
+      {children}
     </Link>
   )
 }

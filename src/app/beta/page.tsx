@@ -3,15 +3,13 @@ import Image from 'next/image'
 
 import styles from '@/assets/styles/pages/Home.module.css'
 
-import type { NextPage } from 'next'
-
-const Home: NextPage = () => {
+export default function Home () {
   /**
    * To reset this project to blank
    * 1. Remove the content of this page
    * 2. Remove the images from ./public/img
    * 3. Remove the style from ./src/assets/pages/Home.module.css
-   * 4. If you want to use the pages directory remove the app directory
+   * 4. If you want to use the app directory remove the pages directory
    */
 
   return (
@@ -41,5 +39,3 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-export default Home

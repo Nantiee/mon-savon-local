@@ -15,17 +15,19 @@
         "project": "./tsconfig.json"
       },
       "rules": {
-        /* ---- TypeScript rules ---- */
+    /* ---- TypeScript rules ---- */
+    // Disable no-undef rule because it is handled by typescript
+    "no-undef": "off",
 
-        // Disable triple-slash-reference to have access to Next definitions
-        "@typescript-eslint/triple-slash-reference": "off",
-        // Disable strict boolean expressions
-        "@typescript-eslint/strict-boolean-expressions": "off",
-        // Disable explicit function return type
-        "@typescript-eslint/explicit-function-return-type": "off",
-        // Force add `type` when importing/exporting types
-        "@typescript-eslint/consistent-type-imports": "warn",
-        "@typescript-eslint/consistent-type-exports": "warn"
+    // Disable triple-slash-reference to have access to Next definitions
+    "@typescript-eslint/triple-slash-reference": "off",
+    // Disable strict boolean expressions
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    // Disable explicit function return type
+    "@typescript-eslint/explicit-function-return-type": "off",
+    // Force add `type` when importing/exporting types
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/consistent-type-exports": "warn"
       }
     }
   ],
@@ -33,8 +35,6 @@
   "rules": {
     /* --- Regular rules ---*/
     "no-console": "warn",
-    // Disable no-undef rule because it is handled by typescript
-    "no-undef": "off",
 
     /* ---- React rules ---- */
 
