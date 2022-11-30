@@ -9,8 +9,7 @@ eslint:
     - pnpm config set store-dir .pnpm-store
   script:
     - pnpm install # install dependencies
-    - pnpm lint
-    - tsc src/**/*.ts --noEmit
+    - pnpm ci
   cache:
     key:
       files:

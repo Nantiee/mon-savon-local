@@ -13,6 +13,7 @@
     "lint-fix": "next lint --fix && stylelint --fix ./src/**/*.css",
     "lint:css": "stylelint --fix ./src/**/*.css",
     "check-types": "tsc --noEmit",
+    "ci": "pnpm lint && pnpm check-types",
     "prettier": "prettier --write **/*.json",
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
