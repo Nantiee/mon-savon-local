@@ -9,8 +9,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix && stylelint '**/*.css' --fix",
-    "lint:css": "stylelint --fix ./**/*.css",
+    "lint": "next lint && stylelint ./src/**/*.css",
+    "lint-fix": "next lint --fix && stylelint --fix ./src/**/*.css",
+    "lint:css": "stylelint --fix ./src/**/*.css",
+    "check-types": "tsc --noEmit",
+    "ci": "pnpm lint && pnpm check-types",
     "prettier": "prettier --write **/*.json",
     "storybook": "BROWSER=none start-storybook -p 6006 ./public",
     "build:storybook": "build-storybook -s public",
@@ -55,7 +58,6 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-storybook": "^0.6.7",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "postcss": "^8.4.18",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.2",
@@ -73,16 +75,5 @@
     "> 3%",
     "last 2 versions",
     "not IE 11"
-  ],
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --max-warnings=0 --fix"
-    ],
-    "src/**/*.css": [
-      "stylelint"
-    ],
-    "src/**/*.json": [
-      "prettier --write **/*.json"
-    ]
-  }
+  ]
 }
