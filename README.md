@@ -1,18 +1,24 @@
 # NextJS Typescript Boilerplate
 🚀 NextJS + Typescript + Storybook production ready boilerplate.
 
-* [💎 PostCSS + postcss-preset-env](#-postcss--postcss-preset-env)
-* [🎨 Style-dictionary](#-style-dictionary)
-* [🧞 Icons with svg-sprite](#-icons-with-svg-sprite)
-* [🤖 Next SEO](#-next-seo)
-* [📏 ESlint & Stylelint](#-eslint--stylelint)
-* [🐶 Husky](#-husky)
-* [🗂 VS Code config](#-vs-code-config)
-* [🔥 VS Code Snippets](#-vs-code-snippets)
+<!-- TOC -->
+* [Features Overview](#features-overview)
+* [How to run](#how-to-run)
+* [Features Details](#features-details)
+  * [💎 PostCSS + postcss-preset-env](#-postcss--postcss-preset-env)
+  * [🎨 Style-dictionary](#-style-dictionary)
+  * [🧞 Icons with svg-sprite](#-icons-with-svg-sprite)
+  * [🤖 Next SEO](#-next-seo)
+  * [📏 ESlint & Stylelint](#-eslint--stylelint)
+  * [🐶 Husky](#-husky)
+  * [⚙️ Gitlab CI](#-gitlab-ci)
+  * [🗂 VS Code config](#-vs-code-config)
+  * [🔥 VS Code Snippets](#-vs-code-snippets)
 * [Components Guidelines](#components-guidelines)
   * [File Naming](#file-naming)
   * [Component Directory Structure](#component-directory-structure)
   * [CSS Modules](#css-modules)
+<!-- TOC -->
 
 ## Features Overview
 - ⚡ NextJS 12
@@ -27,6 +33,7 @@
 - 📏 ESLint — Find and fix problems in your JS/TS, also will **auto-sort** your imports.
 - 📐 Stylelint — Enforce coding style for CSS and **auto-sort** properties.
 - 🐶 Husky — Add Git Hooks.
+- ⚙️ Gitlab CI
 - 🚫 Lint-staged — Running linters on Git staged files.
 - 🗂 VSCode config — Debug, Settings and recommended extensions.
 - 🔥 Snippets — A collection of useful snippets for React, Next & Storybook.
@@ -115,10 +122,15 @@ In this project there are two:
 
 * `post-merge`  
 Run `pnpm install` to check for added or removed packages.
-* `pre-commit`  
-Run `pnpm lint-staged` Lint everything that is staged to ensure code quality.
 
 The `prepare` script is automatically run by pnpm when running `pnpm install`, this ensures that the hooks are always installed.
+
+### ⚙️ Gitlab CI
+A `.gitlab-ci` file is at the root of the project.
+It will run a simple pipeline that will:
+- Run eslint
+- Run stylelint
+- Check types
 
 ### 🗂 VS Code config
 Under `.vscode` your will find multiples files:
